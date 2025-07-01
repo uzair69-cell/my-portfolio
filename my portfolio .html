@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>My, Portfolio!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body{
+  background: #081b29;
+  color: #ededed;
+}
+
+
+:root{
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
+}
+.header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.header .sticky{
+		background: var(--bg-color);
+}
+.logo{
+  position: relative;
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showright 1s ease forwards;
+  animation-delay: .4s;
+}
+nav a{
+  font-size: 20px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+  z-index: 100;
+}
+nav a:hover,
+nav a.active{
+  color: #00abf0;
+}
+
+.home{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.home-content{
+  background: ye;
+  max-width: 600px;
+}
+
+.home-content h1{
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h1::before{
+  content: '';
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showright 1s ease forwards;
+  animation-delay: 1s;
+}
+
+
+.home-content h3{
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+
+.home-content p{ 
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content .btn-box{
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+  background: ;
+}
+
+.btn-box a{
+  position: relative;
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 19px;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  Z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.btn-box a:hover{
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2){
+  background: transparent;
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover{
+  color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before{
+  background: #00abf0;
+}
+
+.btn-box a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;;
+  Z-index: -1;
+  transition: .5s;
+}
+.btn-box a:hover::before{
+  width: 100%;
+}
+
+@keyframes showright{
+  100%{
+    width: 0;
+  }
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--second-bg-color);
+  padding-bottom: 5rem;
+}
+
+.heading{
+  font-size: 4.1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+span{
+  color: var(--main-color);
+}
+
+.about-img {
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.img{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: .2rem solid var(--main-color);
+}
+
+.about-img .circle-spin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: .2rem solid var(--second-bg-color);
+  border-bottom: .2rem solid var(--second-bg-color);
+  border-right: .2rem solid var(--main-color);
+  border-left: .2rem solid var(--main-color);
+}
+.about-content{
+  text-align: center;
+  
+}
+
+.about-content h3{
+  font-size: 2.2rem;
+}
+
+.about-content p{
+  font-size: 1.3rem;
+  margin: 2rem 0 3rem;
+}
+
+.btn-box.btns{
+  display: inline-block;
+  width: 15rem;
+  height: 2.8rem;
+  margin-left: 60px;
+}
+
+.btn-box.btn a{
+  
+}
+
+.btn-box.btns a::before{
+  background: var(--second-bg-color);
+}
+
+.education{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  padding-bottom: 5rem;
+}
+
+.education .education-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: -10rem;
+}
+
+.education-row .education-column{
+  flex: 1 1 10rem;
+  margin: 0 1.5rem 0 3rem;
+  
+}
+
+.education-column .title{
+  font-size: 2.5rem;
+  margin: 2rem 0 3.8rem 2rem;
+}
+
+.education-column .education-box{
+  border-left: 2px solid var(--main-color);
+  padding-left: 2rem;
+}
+
+.education-box .education-content{
+  position: relative;
+  padding-left: rem;
+}
+
+.education-box .education-content::before{
+  content: '';
+  font-size: rem;
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: -3.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--main-color);
+  border-radius: 50%;
+}
+
+.education-content .content{
+  position: relative;
+  padding: 1.5rem;
+  border: .2rem solid var(--main-color);
+  border-radius: .6rem;
+  margin-bottom: 2rem;
+}
+
+.education-content .content::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1;
+  transition: .5s;
+}
+
+.education-content .content:hover::before{
+  width: 100%;
+}
+
+.education-content .content .year{
+  font-size: 1rem;
+  color: var(--main-color);
+  padding-bottom: .5rem;
+}
+
+.education-content .content h3{
+  font-size: 1.4rem;
+  margin-left: .4rem;
+}
+
+.education-content .content p{
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.skills{
+  min-height: 80vh;
+  background: var(--second-bg-color);
+  padding-bottom: 5rem;
+}
+
+.skills .skills-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.skills-row .skills-column{
+  flex: 1 1 2rem;
+  margin: auto 2rem;
+  padding: rem 0;
+}
+
+.skills-column .title{
+  font-size: 2.5rem;
+  margin: 80px 0 4.5rem;
+  text-align: center;
+}
+
+.skills-box .skills-content{
+  position: relative;
+  border: .2rem solid var(--main-color);
+  border-radius: .6rem;
+  padding: .5rem 1.5rem;
+  z-index: ;
+} 
+
+.skills-box .skills-content::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  opacity: 0.2;
+  transition: .9s;
+}
+
+.skills-box .skills-content:hover::before{
+  width: 100%;
+  z-index:;
+  
+}
+
+.skills-content .progress{
+  padding: .5rem 0;
+}
+
+.skills-content .progress h3{
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-content .progress h3 span{
+  color: var(--text-color);
+}
+
+.skills-content .progress .bar{
+  height: 2.5rem;
+  border-radius: .6rem;
+  border: .2rem solid var(--main-color);
+  padding: .5rem;
+  margin: .3rem 0;
+}
+
+.skills-content .progress .bar span{
+  display: block;
+  height: 100%;
+  border-radius: .2rem;
+  background: var(--main-color);
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+  width: 90%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+  width: 95%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+  width: 60%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+  width: 95%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+  width: 95%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+  width: 88%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+  width: 65%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+  width: 80%;
+}
+
+
+
+.contact{
+  min-height: 90vh;
+  padding-bottom: 7rem;
+}
+
+.contact form{
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact form .input-box{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.contact form .input-box .input-field{
+  position: relative;
+  margin: 2.8rem 1rem 0rem;
+  width: 90%;
+}
+
+.contact form .textarea-field textarea{
+  width: 93%;
+  margin: 2.8rem 1rem;
+  position: relative;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea{
+  /*width: 100%;
+  height: 100%;*/
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: transparent;
+  border-radius: .6rem;
+  border: .2rem solid var(--main-color);
+  
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+  color: var(--text-color);
+}
+
+.contact form textarea .focus {
+  position: absolute;
+  top: 0;
+  left: 1.7rem;
+  width: 88%;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1;
+}
+
+/*.contact form .btn-box .btn{
+  display: inline-block;
+  width: 9rem;
+  height: 2.9rem;
+  margin-left: -2rem;
+  background: var(--main-color);
+  border: none;
+  border-radius: .5rem;
+  font-weight: 450;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact form .btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: .5s;
+}
+
+.contact form .btn:hover::before{
+  width: 100%;
+  background: transparent;
+}*/
+  .btn-box .btn{
+		position: relative;
+		height: 2.9rem;
+		width: 9rem;
+		background: var(--bg-color);
+		color: white;
+    border: .2rem solid var(--main-color);
+    border-radius: .5rem;
+    color: var(--main-color);
+    font-size: 1.2rem;
+    font-weight: 450;
+}
+
+.btn-box button::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background: var(--main-color);
+		z-index: -1;
+		transition: .5s;
+}
+
+.btn-box .btn:hover{
+		background: none;
+  color: var(--bg-color);
+}
+
+.btn-box .btn:hover::before{
+		width: 100%;
+
+}
+
+.footer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 2rem 9%;
+		background: var(--second-bg-color);
+}
+
+.footer-text p{
+		font-size: 1.6rem;
+  color: ;
+}
+
+</style>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Uzair</a>
+    <nav>
+      <a href="home" class="active">Home</a>
+      <a href="about">About</a>
+      <a href="education">Education</a>
+      <a href="#">Skills</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <section class="home">
+    <div class="home-content">
+      <h1> Hi, Iʼm Uzair Mustafa</h1>
+      <h3>Frontend Developer</h3>
+      <p>Lorem ipsum dolor amet consectetur
+        adipisicing elit. Laborum, volubtatibus. Id
+        numquam, maiores obcaecati architecto voluptas
+        voluptate, facere iusto asperiores accusamus
+        dignissimos quibusdam voluptates,
+        exercitationem reprehenderit eaque.
+      </p>
+      <div class="btn-box">
+        <a href="#">Hire me</a>
+        <a href="#">Let's Talk</a>
+      </div>
+    </div>
+    <div class="home-sci" >
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      
+    </div>
+  </section>
+  
+  <section class="about" id="about">
+    <h2 class="heading">About <span>Me</span></h2>
+    <div class="about-img">
+      <!--img src="/storage/emulated/0/inshot/InShot_20250112_144347411.jpg"-->
+      <div class="img"></div>
+      <span class="circle-spin"></span>
+    </div>
+    <div class="about-content">
+      <h3>Frontend Developer</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae luctus quam, ac malesuada lorem.
+        Cras orci nisi, tristique eu tristique non, elementum nec lorem. Aenean a faucibus ante. Aliquam eget odio sed
+        
+      </p>
+    </div>
+    <div class="btn-box btns">
+      <a class="btn" href="#">Read More</a>
+    </div>
+  </section>
+  
+  
+  
+  <section class="education" id="education">
+    <h2 class="heading">My <span>Journey</span></h2>
+    <div class="education-row">
+      <div class="education-column">
+        <h3 class="title">Education</h3>
+        <div class="education-box">
+          <div class="education-content">
+            <div class="content">
+              <div class="year"> <i class="fa-solid fa-calendar-days"></i> 2020 - 2021</div>
+              <h3>Matric degree - School</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. hello how not you
+</p>
+            </div>
+          </div>
+          
+          
+          <div class="education-content">
+            <div class="content">
+              <div class="year"> <i class="fa-solid fa-calendar-days"></i> 2021 - 2022</div>
+              <h3>Matric degree - School</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. hello how not you
+</p>
+            </div>
+          </div>
+          
+          <div class="education-content">
+            <div class="content">
+              <div class="year"> <i class="fa-solid fa-calendar-days"></i> 2023 - 2024</div>
+              <h3>Matric degree - School</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. hello how not you
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="education-column">
+        <h3 class="title">Experience</h3>
+        <div class="education-box">
+          <div class="education-content">
+            <div class="content">
+              <div class="year"> <i class="fa-solid fa-calendar-days"></i> 2020 - 2021</div>
+              <h3>Web developer - Company</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. hello how not you
+</p>
+            </div>
+          </div>
+          
+          
+          <div class="education-content">
+            <div class="content">
+              <div class="year"> <i class="fa-solid fa-calendar-days"></i> 2021 - 2022</div>
+              <h3>Web developer - Company</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. hello how not you
+</p>
+            </div>
+          </div>
+          
+          <div class="education-content">
+            <div class="content">
+              <div class="year"> <i class="fa-solid fa-calendar-days"></i> 2023 - 2024</div>
+              <h3>Web developer - Company</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. hello how not you
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <div class="skills-row">
+      <div class="skills-column">
+        <h3 class="title">Coding Skills</h3>
+        <div class="skills-box">
+          <div class="skills-content">
+            <div class="progress">
+              <h3>HTML <span>90%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+            
+            <div class="progress">
+              <h3>CSS <span>95%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+            
+            <div class="progress">
+              <h3>Javascript <span>60%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+            
+            <div class="progress">
+              <h3>C++ <span>70%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <div class="skills-column">
+        <h3 class="title">Proffesional Skills</h3>
+        <div class="skills-box">
+          <div class="skills-content">
+            <div class="progress">
+              <h3>Web Design <span>95%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+            
+            <div class="progress">
+              <h3>Web development <span>88%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+            
+            <div class="progress">
+              <h3>Teaching <span>65%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+            
+            <div class="progress">
+              <h3>Data Entry <span>80%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form>
+      <div class="input-box">
+        <div class="input-field">
+          <input type="text" placeholder="Full Name" required="">
+          <span class="focus"></span>
+        </div> 
+        
+        <div class="input-field">
+          <input type="email" placeholder="Email Adress" required="">
+          <span class="focus"></span>
+        </div>
+      </div>
+      
+      <div class="input-box">
+        <div class="input-field">
+          <input type="number" placeholder="Mobile number" required="">
+          <span class="focus"></span>
+        </div>
+        
+        <div class="input-field">
+          <input type="email" placeholder="Email Subject" required="">
+          <span class="focus"></span>
+        </div>
+      </div>
+      
+      <div class="textarea-field">
+        <textarea placeholder="Your Message" required="" cols="30" rows="10"></textarea>
+        <span class="focus"></span>
+      </div>
+      <div class="btn-box btns">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+  </section>
+  
+  
+  
+  
+  <footer class="footer">
+    <div class="footer-text">
+						<p>Copyright &copy; 2025 by Uzair Mustafa | All rights reserved.</p>
+				</div>
+  </footer>
+   
+    
+    <script>
+		const window.onscroll = () => {
+				let header = document.querySellector('.header');
+				header.classList.toggle('sticky', window.scrollY > 100);
+		} 
+  </script>
+</body>
+</html>
